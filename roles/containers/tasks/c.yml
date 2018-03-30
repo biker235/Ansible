@@ -1,0 +1,12 @@
+---
+  - name: Create a started LXC container
+    lxc_container:
+      name: "{{ item }}"
+      container_log: true
+      template: ubuntu-ansible
+      state: started
+      template_options: --release trusty
+    with_items:
+       - w1
+       - w2
+       - w3

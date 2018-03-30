@@ -1,0 +1,11 @@
+- hosts: webservers
+  vars:
+   - WelcomeMsg: "Hello! Hello! Welcome! Welcome!"
+
+  tasks:
+   - name: Setup Nginx
+     apt: pkg=nginx state=installed update_cache=true
+   - name: Copy index.html file
+     template: src=index.html.j2 dest=/var/www/html/index.html
+   - name: restart nginx
+     service: name=nginx state=restarted

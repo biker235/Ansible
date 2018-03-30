@@ -1,0 +1,6 @@
+[webservers]
+  w1
+  w2
+  w3
+[server]
+  lxc

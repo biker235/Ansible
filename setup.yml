@@ -1,0 +1,5 @@
+- hosts: webservers
+  gather_facts: no
+  tasks:
+   - name: Setup Python
+     raw: apt-get -y install python-simplejson
